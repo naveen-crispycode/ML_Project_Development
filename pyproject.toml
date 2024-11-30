@@ -16,6 +16,6 @@ dependencies = [
     "numpy",
     "pandas",
     "seaborn",
-    "scikit-learn"
+    "scikit-learn",
 ]
 [tool.setuptools.dynamic]
