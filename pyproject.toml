@@ -17,5 +17,6 @@ dependencies = [
     "pandas",
     "seaborn",
     "scikit-learn",
+    "dill"
 ]
 [tool.setuptools.dynamic]
