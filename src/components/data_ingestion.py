@@ -1,5 +1,6 @@
 import os
 import sys
+import numpy as np
 from src.exception import CustomException
 from src.logger import logging
 import pandas as pd
@@ -7,6 +8,8 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
+from src.components.model_training import ModelTrainerConfig
+from src.components.model_training import ModelTrainer
 
 
 @dataclass
@@ -45,8 +48,11 @@ if __name__=="__main__":
 
     data_transformation = DataTransformation()
     train_arr,test_arr,_ = data_transformation.initiate_data_transformation(train_data,test_data)
-
     logging.info("Data is transformed")
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.initiate_model_training(train_arr,test_arr))
+    logging.info("Model has been built")
+    
 
 
     
